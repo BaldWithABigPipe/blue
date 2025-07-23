@@ -1,0 +1,112 @@
+/* === CONTACT PAGE STYLES === */
+
+/* Contact page specific styles */
+.contact-page .contact-map {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .contact-map__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Ensure map takes full height on contact page */
+.contact-page .map-section__map {
+  min-height: 500px;
+}
+
+/* === ADAPTIVE STYLES - Mobile First Approach === */
+
+/* 1600px and below */
+@media (max-width: 1600px) {
+  .contact-hero__title {
+    font-size: 3.5rem;
+  }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+  .contact-hero__title {
+    font-size: 3rem;
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .contact-hero__title {
+    font-size: 2.75rem;
+  }
+}
+
+/* 900px and below */
+@media (max-width: 900px) {
+  .contact-hero__title {
+    font-size: 2.5rem;
+  }
+  .contact-map__content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .contact-hero__title {
+    font-size: 2.25rem;
+  }
+  
+  .contact-hero__description {
+    font-size: var(--text-base);
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .contact-hero__title {
+    font-size: 2rem;
+  }
+  
+  .contact-hero__description {
+    font-size: var(--text-sm);
+  }
+  .contact-page .contact-map__content {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-map__content .contact-us,
+  .contact-map__content .map-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+
+/* 400px and below */
+@media (max-width: 400px) {
+  .contact-hero__title {
+    font-size: 1.75rem;
+  }
+  
+  .contact-hero__description {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .contact-hero__title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-hero__description {
+    font-size: var(--text-xs);
+  }
+} 

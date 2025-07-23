@@ -1,0 +1,29 @@
+/* Main styles file for RoyalTransfer project */
+/* Imports all CSS modules */
+
+/* Import variables and base styles */
+@import url('./variables.css');
+@import url('./base.css');
+
+/* Import component styles */
+@import url('./preloader.css');
+@import url('./header.css');
+@import url('./booking.css');
+@import url('./hero.css');
+@import url('./fleet.css');
+@import url('./reasons.css');
+@import url('./footer.css');
+@import url('./modal.css');
+
+/* Additional component imports will be added here as we create them */
+@import url('./tours-page.css');
+@import url('./tours-section.css');
+@import url('./book-transfer.css');
+@import url('./more-ride.css');
+@import url('./transfer-process.css');
+@import url('./about.css');
+@import url('./contact.css');
+@import url('./faq.css');
+@import url('./tour-pages.css');
+@import url('./floating-contact.css');
+@import url('./mobile-menu.css'); 

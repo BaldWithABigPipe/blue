@@ -1,0 +1,1292 @@
+/* === ABOUT PAGE STYLES === */
+
+/* About Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/aboutbanner.webp') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.about-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero__title {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+.about-hero__description {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-white);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* We Offer Section */
+.we-offer {
+  background: var(--color-primary-dark);
+  padding: 4rem 2rem;
+}
+
+.we-offer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.we-offer__flex {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.we-offer__text {
+  color: var(--color-white);
+  flex: 1;
+}
+
+.we-offer__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.we-offer__description {
+  font-size: var(--text-lg);
+  margin-bottom: 2rem;
+  color: var(--color-gray-light);
+}
+
+.we-offer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.we-offer__item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.we-offer__item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
+
+.we-offer__image {
+  text-align: center;
+  background: var(--color-white);
+  border-radius: 1rem;
+  flex: 1;
+}
+
+.we-offer__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mission Section */
+.mission {
+  background: var(--color-primary);
+  padding: 4rem 2rem;
+}
+
+.mission__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mission__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: var(--font-heading);
+}
+
+.mission__flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.mission__item {
+  background: var(--color-primary-light);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--color-border-light);
+  flex: 1 1 280px;
+  max-width: 350px;
+}
+
+.mission__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mission__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+/* SVG icon adaptation for mission section */
+.mission__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.mission__item-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.mission__item-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-gray-light);
+}
+
+/* Company Numbers Section */
+.company-numbers {
+  background: var(--color-primary-dark);
+  padding: 4rem 2rem;
+}
+
+.company-numbers__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-numbers__flex {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.company-numbers__text {
+  color: var(--color-white);
+  flex: 1;
+}
+
+.company-numbers__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+}
+
+.company-numbers__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.company-numbers__stat {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-primary-light);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-light);
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.company-numbers__stat-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.company-numbers__stat-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.company-numbers__stat-content {
+  flex: 1;
+}
+
+.company-numbers__stat-number {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+}
+
+.company-numbers__stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  line-height: 1.4;
+}
+
+.company-numbers__image {
+  text-align: center;
+  flex: 1;
+}
+
+.company-numbers__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact & Map Section */
+.contact-map {
+  background: var(--color-primary);
+  padding: 4rem 2rem;
+}
+
+.contact-map__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-map__flex {
+  display: flex;
+  gap: 4rem;
+}
+
+/* Contact Us Section */
+.contact-us {
+  color: var(--color-white);
+  flex: 1;
+}
+
+.contact-us__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.contact-us__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-light);
+  margin-bottom: 2rem;
+}
+
+.contact-us__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-us__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--color-primary-light);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-light);
+}
+
+.contact-us__icon {
+  width: 50px;
+  height: 50px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.contact-us__icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.contact-us__details {
+  flex: 1;
+}
+
+.contact-us__label {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.contact-us__value {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
+  line-height: 1.6;
+}
+
+/* Map Section */
+.map-section {
+  color: var(--color-white);
+  flex: 1;
+}
+
+.map-section__title {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+}
+
+.map-section__container {
+  background: var(--color-primary-light);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+}
+
+.map-section__map {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/* Custom Map Marker Styles */
+.custom-marker {
+  background: none;
+  border: none;
+}
+
+.marker-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--color-white);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.marker-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: pulse 2s infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.marker-icon::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--color-accent);
+}
+
+.marker-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+.marker-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Marker animation classes for JavaScript interactions */
+.marker-hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.marker-click {
+  transform: scale(1.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+/* Custom Popup Styles */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  overflow: hidden;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 1.5rem;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border-light);
+  border-top: none;
+  border-left: none;
+}
+
+.map-popup h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+.map-popup p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.map-popup p:last-child {
+  margin-bottom: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.map-popup strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+
+
+/* === ADAPTIVE STYLES - Mobile First Approach === */
+
+/* 1600px and below */
+@media (max-width: 1600px) {
+  .about-hero__title {
+    font-size: 3.5rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 2.5rem;
+  }
+  
+  .mission__icon svg {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-us__icon svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+  .about-hero__title {
+    font-size: 3rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 2.25rem;
+  }
+  
+  .we-offer__flex,
+  .company-numbers__flex,
+  .contact-map__flex {
+    gap: 3rem;
+  }
+  
+  .mission__icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .about-hero__title {
+    font-size: 2.75rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 2rem;
+  }
+  
+  .we-offer__flex,
+  .company-numbers__flex,
+  .contact-map__flex {
+    gap: 2.5rem;
+  }
+
+  .mission__container {
+    max-width: 800px;
+  }
+  
+  .mission__icon svg {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .contact-us__icon svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* 900px and below - Mobile layout activation */
+@media (max-width: 900px) {
+  .about-hero {
+    padding: 3rem 1.5rem;
+  }
+  
+  .about-hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .we-offer,
+  .mission,
+  .company-numbers,
+  .contact-map {
+    padding: 3rem 1.5rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 1.875rem;
+  }
+  
+  .we-offer__flex,
+  .company-numbers__flex,
+  .contact-map__flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .mission__flex {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .mission__item {
+    padding: 1.5rem;
+  }
+  
+  .mission__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .mission__icon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .company-numbers__stat {
+    padding: 1rem;
+  }
+  
+  .company-numbers__stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .contact-us__item {
+    padding: 1rem;
+  }
+  
+  .contact-us__icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-us__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .map-section__map {
+    height: 350px;
+  }
+  
+  .marker-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .marker-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .marker-pulse {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marker-hover {
+    transform: scale(1.05);
+  }
+  
+  .marker-click {
+    transform: scale(1.1);
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2.5rem 1rem;
+  }
+  
+  .about-hero__title {
+    font-size: 2.25rem;
+  }
+  
+  .about-hero__description {
+    font-size: var(--text-base);
+  }
+  
+  .we-offer,
+  .mission,
+  .company-numbers,
+  .contact-map {
+    padding: 2.5rem 1rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 1.75rem;
+  }
+  
+  .we-offer__description {
+    font-size: var(--text-base);
+  }
+  
+  .mission__flex {
+    gap: 1.5rem;
+  }
+  
+  .mission__item {
+    padding: 1.5rem;
+  }
+  
+  .mission__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .mission__icon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .company-numbers__stats {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .company-numbers__stat {
+    padding: 1rem;
+  }
+  
+  .company-numbers__stat-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .company-numbers__stat-number {
+    font-size: var(--text-xl);
+  }
+  
+  .contact-us__info {
+    gap: 1rem;
+  }
+  
+  .contact-us__item {
+    padding: 1rem;
+  }
+  
+  .contact-us__icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contact-us__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .map-section__map {
+    height: 300px;
+  }
+  
+  .marker-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .marker-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .marker-pulse {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marker-hover {
+    transform: scale(1.05);
+  }
+  
+  .marker-click {
+    transform: scale(1.1);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    padding: 1rem;
+  }
+  
+  .map-popup h3 {
+    font-size: var(--text-base);
+  }
+  
+  .map-popup p {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 2rem 0.75rem;
+  }
+  
+  .about-hero__title {
+    font-size: 2rem;
+  }
+  
+  .about-hero__description {
+    font-size: var(--text-sm);
+  }
+  
+  .we-offer,
+  .mission,
+  .company-numbers,
+  .contact-map {
+    padding: 2rem 0.75rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 1.5rem;
+  }
+  
+  .we-offer__description {
+    font-size: var(--text-sm);
+  }
+  
+  .we-offer__item {
+    font-size: var(--text-sm);
+  }
+  
+  .mission__flex {
+    gap: 1rem;
+  }
+  
+  .mission__item {
+    padding: 1.25rem;
+  }
+  
+  .mission__icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .mission__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .mission__item-title {
+    font-size: var(--text-base);
+  }
+  
+  .mission__item-text {
+    font-size: var(--text-sm);
+  }
+  
+  .company-numbers__stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .company-numbers__stat {
+    flex: none;
+    padding: 0.875rem;
+  }
+  
+  .company-numbers__stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .company-numbers__stat-number {
+    font-size: var(--text-lg);
+  }
+  
+  .company-numbers__stat-label {
+    font-size: var(--text-sm);
+  }
+  
+  .contact-us__info {
+    gap: 0.75rem;
+  }
+  
+  .contact-us__item {
+    padding: 0.875rem;
+  }
+  
+  .contact-us__icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-us__icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .contact-us__label {
+    font-size: var(--text-sm);
+  }
+  
+  .contact-us__value {
+    font-size: var(--text-sm);
+  }
+  
+  .map-section__map {
+    height: 250px;
+  }
+  
+  .marker-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .marker-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .marker-pulse {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marker-hover {
+    transform: scale(1.05);
+  }
+  
+  .marker-click {
+    transform: scale(1.1);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    padding: 0.75rem;
+  }
+  
+  .map-popup h3 {
+    font-size: var(--text-sm);
+    margin-bottom: 0.5rem;
+  }
+  
+  .map-popup p {
+    font-size: var(--text-xs);
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* 400px and below */
+@media (max-width: 400px) {
+  .about-hero {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .about-hero__title {
+    font-size: 1.75rem;
+  }
+  
+  .about-hero__description {
+    font-size: var(--text-xs);
+  }
+  
+  .we-offer,
+  .mission,
+  .company-numbers,
+  .contact-map {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 1.25rem;
+  }
+  
+  .we-offer__description {
+    font-size: var(--text-xs);
+  }
+  
+  .we-offer__item {
+    font-size: var(--text-xs);
+  }
+  
+  .mission__flex {
+    gap: 0.75rem;
+  }
+  
+  .mission__item {
+    padding: 1rem;
+  }
+  
+  .mission__icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mission__icon svg {
+    width: 27px;
+    height: 27px;
+  }
+  
+  .mission__item-title {
+    font-size: var(--text-sm);
+  }
+  
+  .mission__item-text {
+    font-size: var(--text-xs);
+  }
+  
+  .company-numbers__stats {
+    gap: 0.5rem;
+  }
+  
+  .company-numbers__stat {
+    padding: 0.75rem;
+  }
+  
+  .company-numbers__stat-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .company-numbers__stat-number {
+    font-size: var(--text-base);
+  }
+  
+  .company-numbers__stat-label {
+    font-size: var(--text-xs);
+  }
+  
+  .contact-us__info {
+    gap: 0.5rem;
+  }
+  
+  .contact-us__item {
+    padding: 0.75rem;
+  }
+  
+  .contact-us__icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .contact-us__icon svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .contact-us__label {
+    font-size: var(--text-xs);
+  }
+  
+  .contact-us__value {
+    font-size: var(--text-xs);
+  }
+  
+  .map-section__map {
+    height: 200px;
+  }
+  
+  .marker-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .marker-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .marker-pulse {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marker-hover {
+    transform: scale(1.05);
+  }
+  
+  .marker-click {
+    transform: scale(1.1);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    padding: 0.5rem;
+  }
+  
+  .map-popup h3 {
+    font-size: var(--text-xs);
+    margin-bottom: 0.25rem;
+  }
+  
+  .map-popup p {
+    font-size: var(--text-xs);
+    margin-bottom: 0.125rem;
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .about-hero__title {
+    font-size: 1.5rem;
+  }
+  
+  .we-offer__title,
+  .mission__title,
+  .company-numbers__title,
+  .contact-us__title,
+  .map-section__title {
+    font-size: 1.125rem;
+  }
+  
+  .mission__icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mission__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .company-numbers__stat-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .company-numbers__stat-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .contact-us__icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-us__icon svg {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .map-section__map {
+    height: 180px;
+  }
+  
+  .marker-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .marker-icon svg {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .marker-pulse {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marker-hover {
+    transform: scale(1.05);
+  }
+  
+  .marker-click {
+    transform: scale(1.1);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    padding: 0.375rem;
+  }
+  
+  .map-popup h3 {
+    font-size: var(--text-xs);
+    margin-bottom: 0.125rem;
+  }
+  
+  .map-popup p {
+    font-size: var(--text-xs);
+    margin-bottom: 0.125rem;
+  }
+} 
