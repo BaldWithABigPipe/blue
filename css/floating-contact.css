@@ -1,0 +1,453 @@
+/* === FLOATING CONTACT BUTTON === */
+.floating-contact {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-floating-contact);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.floating-contact__button {
+  background: var(--color-accent);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px var(--color-accent-shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: visible;
+}
+
+.floating-contact__button:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--color-accent-shadow);
+}
+
+.floating-contact__button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+  display: block;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.floating-contact__button-text {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.floating-contact__button:hover .floating-contact__button-icon {
+  transform: scale(1.1);
+}
+
+.floating-contact__popup {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  background: var(--color-primary-dark);
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px var(--color-shadow-dark);
+  min-width: 16rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  z-index: var(--z-floating-contact);
+  display: block;
+  pointer-events: none;
+}
+
+.floating-contact__popup--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.floating-contact__popup-header {
+  padding: 1rem 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.floating-contact__popup-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  margin: 0;
+  text-align: center;
+}
+
+.floating-contact__popup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-contact__popup-item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.floating-contact__popup-item:last-child {
+  border-bottom: none;
+}
+
+.floating-contact__popup-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.floating-contact__popup-link:hover {
+  background: var(--color-primary-light);
+  color: var(--color-accent);
+}
+
+.floating-contact__popup-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.floating-contact__popup-text {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* === ADAPTIVE STYLES - Mobile First Approach === */
+
+/* 1600px and below */
+@media (max-width: 1600px) {
+  .floating-contact {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .floating-contact__icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 85px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-base);
+  }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+  .floating-contact {
+    right: 1.75rem;
+    bottom: 1.75rem;
+  }
+ 
+  .floating-contact__icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 80px;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-sm);
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .floating-contact {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+  
+  .floating-contact__icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 75px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-sm);
+  }
+}
+
+/* 900px and below */
+@media (max-width: 900px) {
+  .floating-contact {
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+  
+  .floating-contact__icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 70px;
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .floating-contact__icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 65px;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .floating-contact {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+  
+  .floating-contact__icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 60px;
+    padding: 0.375rem 0.625rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-xs);
+  }
+  
+  /* Hide button when footer is visible */
+  .floating-contact__button--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+  
+  /* Hide contact button when in booking section */
+  .floating-contact__button--hidden-in-booking {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+  
+  .floating-contact__button {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    padding: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    gap: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .floating-contact__button-text {
+    display: none;
+  }
+  
+  .floating-contact__button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    pointer-events: none;
+  }
+  
+  .floating-contact__popup {
+    right: 0.75rem;
+    bottom: 4.5rem;
+    min-width: 14rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    z-index: var(--z-floating-contact);
+    display: block;
+    pointer-events: none;
+  }
+  
+  .floating-contact__popup--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* 400px and below */
+@media (max-width: 400px) {
+  .floating-contact {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  
+  .floating-contact__icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 55px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-xs);
+  }
+  
+  .floating-contact__button {
+    padding: 0.625rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    gap: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .floating-contact__button-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    pointer-events: none;
+  }
+  
+  .floating-contact__popup {
+    right: 0.5rem;
+    bottom: 4rem;
+    min-width: 13rem;
+    max-width: calc(100vw - 1rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    z-index: var(--z-floating-contact);
+    display: block;
+    pointer-events: none;
+    position: fixed;
+  }
+  
+  .floating-contact__popup--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .floating-contact {
+    right: 0.375rem;
+    bottom: 0.375rem;
+  }
+  
+  .floating-contact__icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .floating-contact__tooltip {
+    right: 50px;
+    padding: 0.25rem 0.375rem;
+  }
+  
+  .floating-contact__tooltip-text {
+    font-size: var(--text-xs);
+  }
+  
+  .floating-contact__button {
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    gap: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .floating-contact__button-icon {
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+  }
+  
+  .floating-contact__popup {
+    right: 0.375rem;
+    bottom: 3.5rem;
+    min-width: 12rem;
+    max-width: calc(100vw - 0.75rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    z-index: var(--z-floating-contact);
+    display: block;
+    pointer-events: none;
+    position: fixed;
+  }
+  
+  .floating-contact__popup--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+} 

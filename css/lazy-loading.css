@@ -1,0 +1,89 @@
+/* Lazy loading styles */
+
+/* Lazy loading placeholder */
+img.lazy {
+    opacity: 0;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+/* Shimmer animation for loading state */
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Loaded state */
+img.lazy.loaded {
+    opacity: 1;
+    background: none;
+    animation: none;
+}
+
+/* Fallback for browsers without loading="lazy" support */
+img:not([loading="lazy"]) {
+    opacity: 1;
+}
+
+/* Specific styles for different image types */
+.fleet__item-img[loading="lazy"],
+.tours__item-img[loading="lazy"],
+.modal__main-img[loading="lazy"] {
+    min-height: 200px;
+}
+
+.modal__thumbnail[loading="lazy"] {
+    min-height: 60px;
+}
+
+/* Header images should load immediately */
+.header__logo-img[loading="lazy"],
+.header__lang-flag[loading="lazy"],
+.mobile-menu__languages-flag[loading="lazy"] {
+    opacity: 1;
+    background: none;
+    animation: none;
+}
+
+/* Banner image should load with priority */
+.banner__img[loading="lazy"] {
+    opacity: 1;
+    background: none;
+    animation: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fleet__item-img[loading="lazy"],
+    .tours__item-img[loading="lazy"] {
+        min-height: 150px;
+    }
+    
+    .modal__thumbnail[loading="lazy"] {
+        min-height: 50px;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    img.lazy {
+        background: #000;
+        border: 1px solid #fff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    img[loading="lazy"] {
+        transition: none;
+    }
+    
+    img.lazy {
+        animation: none;
+    }
+} 

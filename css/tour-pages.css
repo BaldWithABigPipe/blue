@@ -1,0 +1,508 @@
+/* === TOUR PAGES STYLES === */
+
+/* Tour Detail Page */
+.tour {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.tour__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour__title {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+.tour__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.tour__image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour__image-block {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tour__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.tour__image:hover {
+  transform: scale(1.02);
+}
+
+.tour__info-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tour__info {
+  background: var(--color-primary-light);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-light);
+  width: 100%;
+  max-width: 500px;
+}
+
+.tour__info-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.tour__price {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+}
+
+.tour__description {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-gray-light);
+  margin-bottom: 2rem;
+}
+
+.tour__advantages-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.tour__advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tour__advantages-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-gray-light);
+}
+
+.tour__advantages-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
+
+.tour__nav {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.tour__back {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-lg);
+  transition: all 0.3s ease;
+  font-family: var(--font-heading);
+}
+
+.tour__back:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(209, 162, 54, 0.3);
+}
+
+/* === ADAPTIVE STYLES - Mobile First Approach === */
+
+/* 1600px and below */
+@media (max-width: 1600px) {
+  .tour__title {
+    font-size: 3.5rem;
+  }
+  
+  .tour__info-title {
+    font-size: 2.25rem;
+  }
+  
+  .tour__price {
+    font-size: 1.75rem;
+  }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+  .tour__title {
+    font-size: 3rem;
+  }
+  
+  .tour {
+    padding: 3.5rem 2rem;
+  }
+  
+  .tour__content {
+    gap: 2.5rem;
+  }
+  
+  .tour__info {
+    padding: 1.75rem;
+  }
+  
+  .tour__info-title {
+    font-size: 2rem;
+  }
+  
+  .tour__price {
+    font-size: 1.5rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-base);
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .tour__title {
+    font-size: 2.75rem;
+  }
+  
+  .tour {
+    padding: 3rem 1.5rem;
+  }
+  
+  .tour__content {
+    gap: 2rem;
+  }
+  
+  .tour__info {
+    padding: 1.5rem;
+  }
+  
+  .tour__info-title {
+    font-size: 1.75rem;
+  }
+  
+  .tour__price {
+    font-size: 1.25rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-base);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-sm);
+  }
+}
+
+/* 900px and below - Mobile layout activation */
+@media (max-width: 900px) {
+  .tour__title {
+    font-size: 2.5rem;
+  }
+  
+  .tour {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .tour__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .tour__image-block {
+    max-width: 500px;
+  }
+  
+  .tour__info {
+    padding: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .tour__info-title {
+    font-size: 1.5rem;
+  }
+  
+  .tour__price {
+    font-size: 1.25rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-base);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-sm);
+  }
+  
+  .tour__back {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--text-base);
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .tour__title {
+    font-size: 2.25rem;
+  }
+  
+  .tour {
+    padding: 2rem 1rem;
+  }
+  
+  .tour__content {
+    gap: 1.5rem;
+  }
+  
+  .tour__image-block {
+    max-width: 450px;
+  }
+  
+  .tour__info {
+    padding: 1.25rem;
+    max-width: 500px;
+  }
+  
+  .tour__info-title {
+    font-size: 1.25rem;
+  }
+  
+  .tour__price {
+    font-size: 1.125rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-sm);
+  }
+  
+  .tour__advantages-title {
+    font-size: var(--text-lg);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-xs);
+    padding-left: 1.5rem;
+  }
+  
+  .tour__advantages-item::before {
+    width: 8px;
+    height: 8px;
+    left: 0;
+    top: 6px;
+  }
+  
+  .tour__back {
+    padding: 0.625rem 1.25rem;
+    font-size: var(--text-sm);
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .tour__title {
+    font-size: 2rem;
+  }
+  
+  .tour {
+    padding: 1.5rem 1rem;
+  }
+  
+  .tour__content {
+    gap: 1.25rem;
+  }
+  
+  .tour__image-block {
+    max-width: 400px;
+  }
+  
+  .tour__info {
+    padding: 1rem;
+    max-width: 450px;
+  }
+  
+  .tour__info-title {
+    font-size: 1.125rem;
+  }
+  
+  .tour__price {
+    font-size: 1rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-xs);
+  }
+  
+  .tour__advantages-title {
+    font-size: var(--text-base);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-xs);
+    padding-left: 1.25rem;
+  }
+  
+  .tour__advantages-item::before {
+    width: 6px;
+    height: 6px;
+    left: 0;
+    top: 5px;
+  }
+  
+  .tour__back {
+    padding: 0.5rem 1rem;
+    font-size: var(--text-xs);
+  }
+}
+
+/* 400px and below */
+@media (max-width: 400px) {
+  .tour__title {
+    font-size: 1.75rem;
+  }
+  
+  .tour {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .tour__content {
+    gap: 1rem;
+  }
+  
+  .tour__image-block {
+    max-width: 350px;
+  }
+  
+  .tour__info {
+    padding: 0.875rem;
+    max-width: 400px;
+  }
+  
+  .tour__info-title {
+    font-size: 1rem;
+  }
+  
+  .tour__price {
+    font-size: 0.875rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-xs);
+  }
+  
+  .tour__advantages-title {
+    font-size: var(--text-sm);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-xs);
+    padding-left: 1rem;
+  }
+  
+  .tour__advantages-item::before {
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 4px;
+  }
+  
+  .tour__back {
+    padding: 0.375rem 0.875rem;
+    font-size: var(--text-xs);
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .tour__title {
+    font-size: 1.5rem;
+  }
+  
+  .tour {
+    padding: 1rem 0.5rem;
+  }
+  
+  .tour__content {
+    gap: 0.875rem;
+  }
+  
+  .tour__image-block {
+    max-width: 300px;
+  }
+  
+  .tour__info {
+    padding: 0.75rem;
+    max-width: 350px;
+  }
+  
+  .tour__info-title {
+    font-size: 0.875rem;
+  }
+  
+  .tour__price {
+    font-size: 0.75rem;
+  }
+  
+  .tour__description {
+    font-size: var(--text-xs);
+  }
+  
+  .tour__advantages-title {
+    font-size: var(--text-xs);
+  }
+  
+  .tour__advantages-item {
+    font-size: var(--text-xs);
+    padding-left: 0.875rem;
+  }
+  
+  .tour__advantages-item::before {
+    width: 4px;
+    height: 4px;
+    left: 0;
+    top: 3px;
+  }
+  
+  .tour__back {
+    padding: 0.25rem 0.75rem;
+    font-size: var(--text-xs);
+  }
+} 

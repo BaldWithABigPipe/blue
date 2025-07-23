@@ -1,0 +1,337 @@
+/* Base styles for RoyalTransfer project */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Body and page structure */
+body.page {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-white);
+  background: var(--color-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section containers */
+.section {
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Typography classes */
+.section__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.section__subtitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.section__text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Container classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+[hidden] {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for links and buttons */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Remove border on click/active state */
+a:active,
+button:active,
+input:active,
+textarea:active,
+select:active {
+  outline: none;
+  border: none;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: var(--z-header);
+}
+
+.skip-link:focus {
+  top: 6px;
+} 
+
+/* === ADAPTIVE STYLES - Mobile First Approach === */
+
+/* 1600px and below */
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .section__title {
+    font-size: var(--text-3xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-xl);
+  }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .section__title {
+    font-size: var(--text-2xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-lg);
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .section__title {
+    font-size: var(--text-xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-base);
+  }
+  
+  .section__text {
+    font-size: var(--text-sm);
+  }
+}
+
+/* 900px and below */
+@media (max-width: 900px) {
+  .container {
+    max-width: 800px;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .section__title {
+    font-size: var(--text-lg);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-sm);
+  }
+  
+  .section__text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .section {
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .section__title {
+    font-size: var(--text-base);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-sm);
+  }
+  
+  .section__text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .container {
+    max-width: 500px;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .section__title {
+    font-size: var(--text-sm);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-xs);
+  }
+  
+  .section__text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 400px and below */
+@media (max-width: 400px) {
+  .container {
+    max-width: 400px;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .section__title {
+    font-size: var(--text-xs);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-xs);
+  }
+  
+  .section__text {
+    font-size: var(--text-xs);
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .section__title {
+    font-size: var(--text-xs);
+  }
+  
+  .section__subtitle {
+    font-size: var(--text-xs);
+  }
+  
+  .section__text {
+    font-size: var(--text-xs);
+  }
+} 

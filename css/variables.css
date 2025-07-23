@@ -1,0 +1,74 @@
+/* CSS Variables for RoyalTransfer project with IE11 fallbacks */
+
+/* Fallback values for IE11 and older browsers */
+.color-primary { color: #0a1a2f; }
+.color-primary-light { color: #162b47; }
+.color-primary-dark { color: #001127; }
+.color-accent { color: #d1a236; }
+.color-accent-light { color: #e7bf38; }
+.color-white { color: #ffffff; }
+.color-gray-light { color: #bfc6d1; }
+
+.bg-primary { background-color: #0a1a2f; }
+.bg-primary-light { background-color: #162b47; }
+.bg-primary-dark { background-color: #001127; }
+.bg-accent { background-color: #d1a236; }
+.bg-accent-light { background-color: #e7bf38; }
+.bg-white { background-color: #ffffff; }
+.bg-gray-light { background-color: #bfc6d1; }
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0a1a2f;           /* Main dark blue */
+  --color-primary-light: #162b47;     /* Light primary shade */
+  --color-primary-dark: #001127;      /* Dark primary shade */
+  
+  /* Accent Colors */
+  --color-accent: #d1a236;            /* Gold accent */
+  --color-accent-light: #e7bf38;      /* Light gold */
+  --color-accent-dark: #b8941f;       /* Dark gold */
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;             /* White */
+  --color-gray-light: #bfc6d1;        /* Light gray */
+  
+  /* Transparencies */
+  --color-border-light: rgba(255,255,255,0.1);
+  --color-shadow-light: rgba(10,26,47,0.08);
+  --color-shadow-medium: rgba(10,26,47,0.10);
+  --color-shadow-dark: rgba(10,26,47,0.15);
+  --color-accent-shadow: rgba(227,184,115,0.2);
+  
+  /* Typography */
+  --font-primary: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Russo One', sans-serif;
+  --font-logo: 'Alfa Slab One', cursive;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  
+  /* Transitions */
+  --transition: 0.3s ease;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  
+  /* Z-index layers */
+  --z-modal: 10000;
+  --z-header: 9999;
+  --z-mobile-menu: 9998;
+  --z-floating-contact: 9997;
+} 
