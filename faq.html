@@ -182,10 +182,16 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Russo+One&family=Rubik:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Leaflet with integrity/crossorigin -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-1A4w6QwQw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==" crossorigin="anonymous" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer integrity="sha384-1A4w6QwQw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 </head>
 <body class="page faq-page">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__text">Loading...</div>
+    <div class="preloader__spinner"></div>
+  </div>
+  
   <!-- Skip links for accessibility -->
   <a href="#main-content" class="skip-link" tabindex="0" aria-label="Skip to main content">Skip to main content</a>
   

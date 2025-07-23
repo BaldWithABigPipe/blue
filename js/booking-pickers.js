@@ -1174,6 +1174,13 @@ class BookingPickers {
  * Initialize booking pickers
  */
 function initBookingPickers() {
+  // Check if we're on a page with booking form
+  const bookingForm = document.querySelector('.booking__form');
+  if (!bookingForm) {
+    // No booking form on this page, don't initialize
+    return;
+  }
+  
   const pickers = new BookingPickers();
   pickers.init();
   window.bookingPickers = pickers;
@@ -1183,6 +1190,13 @@ function initBookingPickers() {
  * Try to initialize with retries
  */
 function tryInitPickers() {
+  // Check if we're on a page with booking form
+  const bookingForm = document.querySelector('.booking__form');
+  if (!bookingForm) {
+    // No booking form on this page, don't initialize
+    return;
+  }
+  
   let attempts = 0;
   const maxAttempts = 10;
   

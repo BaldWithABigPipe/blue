@@ -609,6 +609,13 @@ class BookingDatePicker {
  * Initialize datepicker when DOM is ready
  */
 const initBookingDatePicker = async () => {
+  // Check if we're on a page with booking form
+  const bookingForm = document.querySelector('.booking__form');
+  if (!bookingForm) {
+    // No booking form on this page, don't initialize
+    return;
+  }
+
   const maxRetries = 10;
   let attempts = 0;
 
