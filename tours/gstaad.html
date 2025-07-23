@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -40,8 +40,67 @@
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/preloader.js"></script>
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Gstaad — Tour",
+    "description": "Gstaad — premium tour in Switzerland. Comfort, safety and unique experiences with ROYALTRANSFER.",
+    "url": "https://royaltransfer.ch/tours/gstaad.html",
+    "image": "https://royaltransfer.ch/img/tours/2.jpg",
+    "price": "590.00",
+    "priceCurrency": "EUR",
+    "location": {
+      "@type": "Place",
+      "name": "Gstaad",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CH",
+        "addressRegion": "Bern"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "ROYALTRANSFER",
+      "url": "https://royaltransfer.ch"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://royaltransfer.ch/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tours",
+        "item": "https://royaltransfer.ch/tours.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Gstaad",
+        "item": "https://royaltransfer.ch/tours/gstaad.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page tour-page">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__text">Loading...</div>
+    <div class="preloader__spinner"></div>
+  </div>
+  
   <a href="#main-content" class="skip-link" tabindex="0" aria-label="Skip to main content">Skip to main content</a>
   <!-- Header -->
   <header class="header">
@@ -395,3 +454,4 @@
   <script src="../js/load-scripts.js"></script>
 </body>
 </html> 
+

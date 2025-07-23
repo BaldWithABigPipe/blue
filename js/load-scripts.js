@@ -63,7 +63,9 @@
         var pathname = window.location.pathname;
         
         // Check if we're in a subdirectory
-        if (pathname.indexOf('/ru/') !== -1) {
+        if (pathname.indexOf('/ru/tours/') !== -1) {
+            return '../../js/';
+        } else if (pathname.indexOf('/ru/') !== -1) {
             return '../js/';
         } else if (pathname.indexOf('/tours/') !== -1) {
             return '../js/';

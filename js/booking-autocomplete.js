@@ -2124,6 +2124,13 @@ window.bookingAutocompleteData = bookingAutocompleteData;
 
 // Initialize when DOM is ready
 function initBookingAutocomplete() {
+  // Check if we're on a page with booking form
+  const bookingForm = document.querySelector('.booking__form');
+  if (!bookingForm) {
+    // No booking form on this page, don't initialize
+    return;
+  }
+
   // Check if elements exist
   const fromInput = document.getElementById('booking_from');
   const toInput = document.getElementById('booking_to');

@@ -166,7 +166,7 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/lazy-loading.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
   
   <!-- Preloader - load immediately -->
   <script src="js/preloader.js"></script>
@@ -177,6 +177,12 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://t.me https://wa.me;">
 </head>
 <body class="page contact-page">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__text">Loading...</div>
+    <div class="preloader__spinner"></div>
+  </div>
+  
   <!-- Skip links for accessibility -->
   <a href="#main-content" class="skip-link" tabindex="0" aria-label="Skip to main content">Skip to main content</a>
   
@@ -572,7 +578,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
   <script src="../js/map.js"></script>
   <script src="../js/load-scripts.js"></script>
 </body>
